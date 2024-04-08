@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-compile": "node-sass src/styles/main.scss > src/public/styles/main.css"
   },
   "author": "Jacob Nelson",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "express": "^4.19.2",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "node-sass": "^9.0.0"
   }
 }
