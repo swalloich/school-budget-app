@@ -15,16 +15,9 @@ apiRouter.all('/*', (req, res) => {
     res.status(404).send("Not Found.");
 });
 
-app.get('/*', (_req, res) => {
-    if (fileExists('not-found.html')) {
-        res.status(404).sendFile(`${__dirname}/src/public/not-found.html`);
-    } else {
-        res.status(400).send('There was a problem while getting the 404 page.')
-    }
-});
 app.get('/dashboard', (_req, res) => {
     if (fileExists('dashboard.html')) {
-        res.status(200).sendFile(`${__dirname}/src/public/about.html`);
+        res.status(200).sendFile(`${__dirname}/src/public/dashboard.html`);
     } else {
         res.status(400).send("There was a problem while getting that page.");
     }
@@ -34,6 +27,13 @@ app.get('/login', (_req, res) => {
         res.status(200).sendFile(`${__dirname}/src/public/login.html`);
     } else {
         res.status(500).send("There was a problem while getting that page.");
+    }
+});
+app.get('/*', (_req, res) => {
+    if (fileExists('not-found.html')) {
+        res.status(404).sendFile(`${__dirname}/src/public/not-found.html`);
+    } else {
+        res.status(400).send('There was a problem while getting the 404 page.')
     }
 });
 app.use((_req, res) => {
