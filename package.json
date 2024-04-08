@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass-compile": "node-sass src/styles/main.scss > src/public/styles/main.css"
+    "sass-compile": "node-sass src/styles/main.scss > src/public/styles/main.css --output-style compressed",
+    "dev-sass-compile": "node-sass src/styles/main.scss > src/public/styles/main.css"
   },
   "author": "Jacob Nelson",
   "license": "ISC",
