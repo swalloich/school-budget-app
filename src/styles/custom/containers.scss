@@ -1,0 +1,42 @@
+$widths: (
+    "xs": (
+        "view-width": 0px,
+        "max-width": 100%,
+    ),
+    "sm": (
+        "view-width": 576px,
+        "max-width": 550px,
+    ),
+    "md": (
+        "view-width": 768px,
+        "max-width": 700px,
+    ),
+    "lg": (
+        "view-width": 992px,
+        "max-width": 850px,
+    ),
+    "xl": (
+        "view-width": 1200px,
+        "max-width": 1000px,
+    ),
+    "xxl": (
+        "view-width": 1400px,
+        "max-width": 1100px,
+    )
+);
+
+@mixin container {
+    .container {
+        max-width: 100%;
+
+        @each $size, $details in $widths {
+            @if $size != "xs" {
+                @media (min-width: map-get($details, 'view-width')) {
+                    max-width: map-get($details, "max-width");
+                }
+            }
+        }
+    }
+}
+
+@include container;
