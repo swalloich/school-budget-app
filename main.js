@@ -13,6 +13,12 @@ apiRouter.get('/', (req, res) => {
     res.status(200).send("https://youtu.be/_ElWlUr_tw8")
 });
 
+//endpoints here
+
+apiRouter.use((_req, res) => {
+    res.status(404).send("API endpoint not found.");
+});
+
 app.get('/dashboard', (_req, res) => {
     if (fileExists('public/dashboard.html')) {
         res.status(200).sendFile(`${__dirname}/src/public/dashboard.html`);
