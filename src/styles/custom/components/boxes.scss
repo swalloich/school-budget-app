@@ -1,0 +1,15 @@
+$box-prefix: "mw-box-";
+
+$boxes: (
+    "500": (
+        "max-width": 500px,
+        "height": unset,
+    ),
+);
+
+@each $name, $details in $boxes {
+    .#{$box-prefix}#{$name} {
+        max-width: map-get($details, "max-width");
+        height: map-get($details, "height");
+    }
+}

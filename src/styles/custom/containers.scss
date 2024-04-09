@@ -28,6 +28,7 @@ $widths: (
 @mixin container {
     .container {
         max-width: 100%;
+        box-sizing: border-box;
 
         @each $size, $details in $widths {
             @if $size != "xs" {
