@@ -1,10 +1,18 @@
 @use 'variables';
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
     font-family: variables.$body-fonts;
     font-weight: 400;
     color: variables.$font-color;
     margin: 0;
+}
+
+main {
+    flex: 1 0;
 }
 
 h1, h2, h3, h4, h5 {
