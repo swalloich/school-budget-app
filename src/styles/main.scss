@@ -1,6 +1,12 @@
 /* Begin Bootstrap utilities */
-@import "node_modules/bootstrap/scss/bootstrap-utilities.scss";
-@import "node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap-utilities.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap-utilities.scss";
 /* End Bootstrap utilities */
-@import "src/styles/custom/base.scss";
-@import "src/styles/custom/containers.scss";
+
+/* Begin custom styles */
+/* utilities & containers */
+@import "custom/base.scss";
+@import "custom/containers.scss";
+/* components */
+@import "custom/components/nav-bar.scss";
+/* End custom styles */

@@ -1,0 +1,13 @@
+.header-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .logo-container {
+        width: fit-content;
+    }
+
+    .nav-bar {
+        flex: 1 0;
+    }
+}

@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass-compile": "node-sass src/styles/main.scss -o src/public/styles/ --output-style compressed --force",
-    "dev-sass-compile": "node-sass src/styles/main.scss > src/public/styles/main.css"
+    "sass-compile": "sass --no-source-map --style=compressed src/styles/main.scss src/public/styles/main.css",
+    "dev-sass-compile": "sass --no-source-map src/styles/main.scss src/public/styles/main.css"
   },
   "author": "Jacob Nelson",
   "license": "ISC",
@@ -15,7 +15,6 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "express": "^4.19.2",
-    "fs": "^0.0.1-security",
-    "node-sass": "^9.0.0"
+    "fs": "^0.0.1-security"
   }
 }
