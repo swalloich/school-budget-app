@@ -3,8 +3,38 @@ $body-fonts: "Roboto Condensed", sans-serif;
 $heading-fonts: "Fira Sans", sans-serif;
 
 // Colors
-$active: #F5790E;
-$inactive: #807973;
-$h-link: #0F84F5;
+$pop-orange: #F5790E;
+$dark-orange: #6b3506;
+$gray: #807973;
+$pop-blue: #0F84F5;
+
+$active: $pop-orange;
+$active-hover: $dark-orange;
+$inactive: $gray;
+$h-link: $pop-blue;
 
 $font-color: black;
+$font-color-light: white;
+
+// other
+$unique-prefix: "jn-"; // intended to be used on classes that may conflict with bootstrap ones.
+$breakpoints: (
+    "xs": (
+        "breakpoint": 0,
+    ),
+    "sm": (
+        "breakpoint": 576px,
+    ),
+    "md": (
+        "breakpoint": 768px,
+    ),
+    "lg": (
+        "breakpoint": 992px,
+    ),
+    "xl": (
+        "breakpoint": 1200px,
+    ),
+    "xxl": (
+        "breakpoint": 1400px,
+    )
+);

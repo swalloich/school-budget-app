@@ -1,0 +1,46 @@
+@use 'variables';
+
+$bg-color-prefix: "bg-";
+$background-colors: (
+    "pop-orange": variables.$pop-orange,
+    "dark-orange": variables.$dark-orange,
+    "gray": variables.$gray,
+    "pop-blue": variables.$pop-blue,
+);
+
+@mixin bg-colors {
+    @each $color-name, $color in $background-colors {
+        .#{variables.$unique-prefix}#{$bg-color-prefix}#{$color-name} {
+            background-color: $color;
+        }
+
+        .#{variables.$unique-prefix}#{$bg-color-prefix}#{$hover-infix}#{$color-name}:hover {
+            background-color: $color;
+        }
+    }
+}
+
+$hover-infix: "hover-";
+
+@mixin bg-hover-colors {
+    @each $color-name, $color in $background-colors {
+        
+    }
+}
+
+$text-color-prefix: "color-";
+$text-colors: (
+    "dark": variables.$font-color,
+    "light": variables.$font-color-light,
+);
+
+@mixin font-colors {
+    @each $color-name, $color in $text-colors {
+        // TODO
+    }
+}
+
+
+
+@include bg-colors();
+@include bg-hover-colors();
